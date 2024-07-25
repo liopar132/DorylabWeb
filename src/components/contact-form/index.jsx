@@ -3,12 +3,14 @@ import ContactHeader from './air-contionner.jpg'
 import { Button, Input, TextField } from '@mui/material'
 
 function isValidEmail(email) {
-  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  return emailPattern.test(email);
+    console.log(email)
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailPattern.test(email);
 }
 function isValidPhoneNumber(phoneNumber) {
-  const phonePattern = /^(\+\d{1,3}[- ]?)?\d{10}$/;
-  return phonePattern.test(phoneNumber);
+    console.log(phoneNumber)
+    const phonePattern = /^(\+\d{1,3}[- ]?)?\d{10}$/;
+    return phonePattern.test(phoneNumber);
 }
 
 function ContactForm() {
@@ -22,30 +24,45 @@ function ContactForm() {
 
     const [error, setError] = useState(false);
 
+    const emailValidation = (value) => {
+        if(!isValidEmail(value)){
+            setEmailError(true);
+            setEmailHelperText('Invalid email address');
+            setError(true)
+        } else {
+            setEmailError(false);
+            setEmailHelperText('');
+            setError(false)
+        }
+    }
+    const phoneValidation = (value) => {
+        if(!isValidPhoneNumber(value)){
+            setPhoneError(true);
+            setPhoneHelperText('Invalid phone number')
+            setError(true)
+        } else {
+            setPhoneError(false);
+            setPhoneHelperText('')
+            setError(false)
+        }
+    }
     const handleChangePhone = (event) => {
         const value = event.target.value;
         setPhone(value);
+        phoneValidation(value);
     }
     const handleChangeEmail = (event) => {
         const value = event.target.value;
         setEmail(value);
+        emailValidation(value);
     };
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if(!isValidEmail(email)){
-            setEmailError(true);
-            setEmailHelperText('Invalid email address');
-            setError(true)
+        if(!error){
+            alert('submited')
         }
-        if(!isValidPhoneNumber(phone)){
-            setPhoneError(true);
-            setPhoneHelperText('Invalid phone number')
-            setError(true)
-        } 
-
-        if(error) return;
-        alert('submited')
 
     };
     return (
