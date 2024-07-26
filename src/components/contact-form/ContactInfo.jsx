@@ -2,7 +2,7 @@ import React from 'react'
 
 function ContactInfo() {
   return (
-    <div className='bg-gradient-to-r from-blue-500 to-blue-400 w-full h-full p-6 rounded-xl text-white'>
+    <div className='bg-gradient-to-r from-blue-500 to-blue-400 w-full h-full p-6 rounded-xl text-white text-left'>
         <p className='mb-5'><span className='font-bold'>Address -</span> Rue Ibn Hanbal, Residence Ibn Khaldoune Imb, 1 appt, 10, Rabat 10080</p>
 
         <p className='mb-5'><span className='font-bold'>Phone -</span> 05376-72227</p>

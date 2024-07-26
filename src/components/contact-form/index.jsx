@@ -87,38 +87,56 @@ function ContactForm() {
         </React.Fragment>
     );
     return (
-        <div className='h-screen w-full'>
-            <img src={ContactHeader} alt="" className='h-1/2 w-full object-cover'/>
-            <div class="bg-gradient-to-b from-transparent to-white w-full h-1/2 absolute top-0 z-10 opacity-100"></div>
+        <>
+        <img src={ContactHeader} alt="" className='h-1/2 w-full object-cover absolute top-0 -z-10'/>
+        <div class="bg-gradient-to-t from-white to-transparent w-full h-1/2 absolute top-0 z-0 "></div>
 
+        <div className='container min-w-full mt-40 py-4 px-10'>
+            <div className='container mx-auto text-center flex flex-col items-center my-28'>
+                <div className='bg-white rounded-xl shadow-md z-20 max-w-5xl'
+                        // 'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20'
+                        >
+                    <Grid container spacing={2} >
+                        <Grid item xs={12} md={8}>
+                            <form className='flex flex-col gap-5 p-6' 
+                                onSubmit={handleSubmit}>
+                                <h1 className='text-xl font-bold mb-5'>Contactez Nous !</h1>
+                                <Grid container spacing={2} >
+                                    <Grid item xs={12} md={6}>
+                                    <TextField className='w-full' id="outlined-basic" label="Nom" variant="outlined" required />
+                                    </Grid>
+                                    <Grid item xs={12} md={6}>
+                                    <TextField className='w-full' id="outlined-basic" label="Prénom" variant="outlined" required />
+                                    </Grid>
+                                    <Grid item xs={12} md={6}>
+                                    <TextField className='w-full' id="outlined-basic" label="Entreprise" variant="outlined"/>
+                                    </Grid>
+                                    <Grid item xs={12} md={6}>
+                                    <TextField className='w-full' id="outlined-basic" label="Télephone" variant="outlined" onChange={handleChangePhone} helperText={phoneHelperText} error={phoneError}  required />
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                    <TextField className='w-full' id="outlined-basic" label="E-mail" variant="outlined" onChange={handleChangeEmail} helperText={emailHelperText} error={emailError} required/>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                    <TextField className='w-full' id="outlined-basic" label="Sujet" variant="outlined" required/>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                    <TextField className='w-full' id="outlined-basic" label="Contenu" variant="outlined" size='medium' required/>
+                                    </Grid>
+                                </Grid>
 
-            <div className='bg-white rounded-xl shadow-xl 
-                    absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20'>
-                <Grid container spacing={2} >
-                    <Grid item xs={12} md={6}>
-                        <form className='flex flex-col gap-5 p-6' 
-                            onSubmit={handleSubmit}>
-                            <h1 className='text-xl font-bold mb-5'>Contactez Nous !</h1>
-                            <div className='flex flex-row gap-5'>
-                                <TextField id="outlined-basic" label="Nom" variant="outlined" required />
-                                <TextField id="outlined-basic" label="Prénom" variant="outlined" required />
-                            </div>
-                            <div className='flex flex-row gap-5'>
-                                <TextField id="outlined-basic" label="Entreprise" variant="outlined"/>
-                                <TextField id="outlined-basic" label="Télephone" variant="outlined" onChange={handleChangePhone} helperText={phoneHelperText} error={phoneError}  required />
-                            </div>
-                            <TextField id="outlined-basic" label="E-mail" variant="outlined" onChange={handleChangeEmail} helperText={emailHelperText} error={emailError} required/>
-                            <TextField id="outlined-basic" label="Sujet" variant="outlined" required/>
-                            <TextField id="outlined-basic" label="Contenu" variant="outlined" size='medium' required/>
-
-                            <Button type='submit' variant='contained'>Envoyer</Button>
-                        </form>
+                                <Button type='submit' variant='contained'>Envoyer</Button>
+                            </form>
+                        </Grid>
+                        <Grid item xs={12} md={4}>
+                            <ContactInfo></ContactInfo>
+                        </Grid>
                     </Grid>
-                    <Grid item xs={12} md={6}>
-                        <ContactInfo></ContactInfo>
-                    </Grid>
-                </Grid>
+                </div>
+
             </div>
+
+
             <Snackbar
                 open={open}
                 autoHideDuration={4000}
@@ -133,6 +151,7 @@ function ContactForm() {
                 />
             </Snackbar>
         </div>
+        </>
     )
 }
 
