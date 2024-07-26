@@ -6,12 +6,18 @@ import Footer from './components/footer';
 import Partners from './components/partners';
 import LandingPage from './pages/landing';
 import ContactPage from './pages/contact';
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <>
-      <ContactPage></ContactPage>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/'>
+          <Route index  element={<LandingPage/>}/>
+          <Route path='contact' element={<ContactPage/>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
