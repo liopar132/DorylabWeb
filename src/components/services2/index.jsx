@@ -5,7 +5,7 @@ import ServiceCard from './ServiceCard';
 
 function Servies2() {
   return (
-    <div className="container min-w-full px-10 bg-gradient-to-r from-cyan-500 to-blue-500 text-white">
+    <div className="container min-w-full px-10  text-white">
       <div className="container mx-auto text-center flex flex-col items-center">
         {/* <h1 className="text-5xl font-bold pb-10 pt-5">Nos Services</h1> */}
         <div className='max-w-5xl'>

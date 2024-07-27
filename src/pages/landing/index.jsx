@@ -11,10 +11,12 @@ function LandingPage() {
     <>
       <Navbar></Navbar>
       <Header></Header>
-      <Description></Description>
-      <Servies2></Servies2>
-      <Partners></Partners>
-      <Footer></Footer>
+      <div className='bg-gradient-to-b from-cyan-500 to-blue-500 '>
+        <Description></Description>
+        <Servies2></Servies2>
+        <Partners></Partners>
+        <Footer></Footer>
+      </div>
     </>
   )
 }
