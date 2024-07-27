@@ -53,7 +53,7 @@ const useTailwindBreakpoints = () => {
 };
 
 function Description() {
-  const { isSmall, isMedium, isLarge, isXLarge, is2XLarge } = useTailwindBreakpoints();
+  const { isSmall } = useTailwindBreakpoints();
 
   return (
     <div className='container min-w-full py-4 px-10 relative' style={{"height" : "575px"}}>

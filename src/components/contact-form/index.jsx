@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import ContactHeader from './air-contionner.jpg'
-import { Button, Grid, IconButton, Input, Snackbar, SnackbarContent, TextField } from '@mui/material'
-import CloseIcon from '@mui/icons-material/Close';
+import { Button, Grid, IconButton, Snackbar, SnackbarContent, TextField } from '@mui/material'
 import { Close } from '@mui/icons-material';
 import ContactInfo from './ContactInfo';
 
@@ -31,6 +30,7 @@ function ContactForm() {
     const [open, setOpen] = useState(false);
 
     const emailValidation = (value) => {
+        
         if(!isValidEmail(value)){
             setEmailError(true);
             setEmailHelperText('Invalid email address');
@@ -67,6 +67,11 @@ function ContactForm() {
         if(!error){
             setOpen(true);
             // TODO submit logic
+            const objectToSubmit = {
+                'email':  email,
+                'phone': phone
+            }
+            console.log(objectToSubmit)
         }
     };
 
