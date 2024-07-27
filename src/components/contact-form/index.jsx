@@ -90,7 +90,6 @@ function ContactForm() {
         <>
         <img src={ContactHeader} alt="" className='h-1/2 w-full object-cover absolute top-0 -z-10'/>
         <div class="bg-gradient-to-t from-white to-transparent w-full h-1/2 absolute top-0 z-0 "></div>
-
         <div className='container min-w-full mt-40 py-4 px-10'>
             <div className='container mx-auto text-center flex flex-col items-center my-28'>
                 <div className='bg-white rounded-xl shadow-md z-20 max-w-5xl'
