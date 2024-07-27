@@ -10,7 +10,7 @@ import ContactPage from './pages/contact';
 function App() {
   return (
     <>
-      <ContactPage></ContactPage>
+      <LandingPage></LandingPage>
     </>
   );
 }
