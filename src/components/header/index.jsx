@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <div className='container min-w-full h-screen'>
-      <img src={header_image} className='w-full h-screen object-cover absolute -z-50' alt='header image'/>
+      <img src={header_image} className='w-full h-screen object-cover absolute -z-50' alt='header'/>
       <div class="bg-gradient-to-r from-sky-950 w-full h-screen absolute -z-40"></div>
       <div className='container mx-auto py-2 px-10 text-white flex flex-col justify-center h-full'>
         <h1 className='text-5xl font-bold'>DORYLAB</h1>
