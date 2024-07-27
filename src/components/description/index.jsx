@@ -56,8 +56,8 @@ function Description() {
   const { isSmall } = useTailwindBreakpoints();
 
   return (
-    <div className='container min-w-full py-4 px-10 relative' style={{"height" : "575px"}}>
-      <div className='w-4/5 max-w-7xl mx-auto bg-white shadow-2xl py-8 px-16 absolute left-1/2 -translate-x-1/2 -top-20'>
+    <div className='container min-w-full px-10 relative' >
+      <div className='w-4/5 max-w-7xl mx-auto bg-white shadow-2xl py-8 px-16 relative bottom-20'>
         <div className='container mx-auto text-center	flex flex-col items-center'>
           <h1 className='text-4xl font-bold'>Qui Sommes-Nous ?</h1>
           <h2 className='text-2xl'>Experts en climatisation et ventilation depuis plus de 25 ans.</h2>
