@@ -3,9 +3,9 @@ import header_image from './air-contionner.jpg'
 import { Grid } from '@mui/material';
 import ServiceCard from './ServiceCard';
 
-function Servies2() {
+function Servies2(props) {
   return (
-    <div className="container min-w-full px-10  text-white">
+    <div id='services' ref={props.sectionRef} className="container min-w-full px-10  text-white">
       <div className="container mx-auto text-center flex flex-col items-center">
         {/* <h1 className="text-5xl font-bold pb-10 pt-5">Nos Services</h1> */}
         <div className='max-w-5xl'>

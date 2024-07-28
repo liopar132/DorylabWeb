@@ -7,7 +7,7 @@ import toshiba_logo from './Toshiba-logo.png'
 
 function Partners() {
   return (
-    <div className='container min-w-full my-16 py-4 px-10 bg-white shadow-xl' >
+    <div id='partners' className='container min-w-full my-16 py-4 px-10 bg-white shadow-xl' >
       <div className='container max-w-7xl mx-auto text-center	flex flex-col'>
         <h1 className='text-5xl font-bold pb-5'>Nos Partenaires</h1>
         <div className='flex flex-row justify-around'>
