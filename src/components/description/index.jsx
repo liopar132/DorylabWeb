@@ -16,8 +16,8 @@ function Description() {
     <div className='container min-w-full px-10 relative' >
       <div className='w-full max-w-7xl mx-auto bg-white shadow-2xl py-8 px-10 relative bottom-20 '>
         <div className='container mx-auto text-center	flex flex-col items-center'>
-          <h1 className='text-4xl font-bold'>Qui Sommes-Nous ?</h1>
-          <h2 className='text-2xl'>Experts en climatisation et ventilation depuis plus de 25 ans.</h2>
+          <h2 className='text-4xl font-bold'>Qui Sommes-Nous ?</h2>
+          <h3 className='text-2xl'>Experts en climatisation et ventilation depuis plus de 25 ans.</h3>
           <p className='text-justify center w-full font-thin py-5' style={{"textAlignLast" : "center"}}>Dorylab Rabat est une société spécialisée dans les domaines de la climatisation et de la réfrigération avec plus de 15 ans d’expérience dans le secteur. Nous nous spécialisons dans la réparation, l’installation et l’entretien d’équipements de climatisation ,  domestiques, commerciaux et industriels, apportant un savoir faire technique.</p>
         </div>
         <div className='container mx-auto relative'>

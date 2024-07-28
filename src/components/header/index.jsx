@@ -24,10 +24,14 @@ function Header() {
       <img src={header_image} className='parallax-image w-full h-screen object-cover absolute -z-50 will-change-transform translate-y-0' alt='header' />
       <div class="bg-gradient-to-r from-sky-950 w-full h-screen absolute -z-40"></div>
       <div className='container mx-auto py-2 px-10 text-white flex flex-col justify-center h-full'>
-        <h1 className='text-5xl font-bold'>DORYLAB</h1>
-        <h2 className='text-3xl font-thin'>Something Somethign Somethign</h2>
+        <h1 className='text-5xl font-bold'>
+          DORYLAB <br/>
+          <span className='text-3xl font-thin'>Leaders de la climatisation au Maroc</span>
+        </h1>
         <br/>
-        <p className='font-thin'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br/> Ipsam cum aut in perspiciatis vitae obcaecati neque</p>
+        <p className='font-thin'>
+          Particuliers ou profesionnels, Dorylab vous offre ces services de réparation,<br/>d'installation et d'entretien de vos équipements ou que vous soyez au Maroc.
+        </p>
         <br/>
         
         <Link to='/contact'>
