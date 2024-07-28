@@ -3,7 +3,6 @@ module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
     screens: {
-      xs: '0px',    // Optional: Tailwind does not have an xs by default
       sm: '600px',  // Matches MUI's sm breakpoint
       md: '900px',  // Matches MUI's md breakpoint
       lg: '1200px', // Matches MUI's lg breakpoint

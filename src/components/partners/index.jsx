@@ -10,7 +10,7 @@ function Partners() {
     <div id='partners' className='container min-w-full my-16 py-4 px-10 bg-white shadow-xl' >
       <div className='container max-w-7xl mx-auto text-center	flex flex-col'>
         <h1 className='text-5xl font-bold pb-5'>Nos Partenaires</h1>
-        <div className='flex flex-row justify-around'>
+        <div className='flex flex-row flex-wrap justify-around gap-x-4'>
           <img className='size-28 object-contain' src={lg_logo} alt="" />
           <img className='size-28 object-contain' src={carrier_logo} alt="" />
           <img className='size-28 object-contain' src={fitco_logo} alt="" />
