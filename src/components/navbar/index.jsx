@@ -46,8 +46,8 @@ function Navbar() {
           {
             !collapsedMenu &&
             <menu className='h-fit flex flex-row justify-between gap-6'>
-              <a className='h-fit w-fit text-sm hover:text-blue-500 duration-200' href='#services'>Services</a>
-              <a className='h-fit w-fit text-sm hover:text-blue-500 duration-200' href='#partners'>Partenaires</a>
+              <a className='h-fit w-fit text-sm hover:text-blue-500 duration-200' href='/#services'>Services</a>
+              <a className='h-fit w-fit text-sm hover:text-blue-500 duration-200' href='/#partners'>Partenaires</a>
             </menu>
           }
       </header>
