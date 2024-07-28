@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import header_image from './air-contionner.jpg'
 import { Link } from 'react-router-dom';
 
 function Header() {
+  // paralax
+  useEffect(() => {
+    const handleScroll = () => {
+      const parallaxImage = document.querySelector('.parallax-image');
+      const scrolled = window.pageYOffset;
+      parallaxImage.style.transform = `translateY(${scrolled * 0.5}px)`;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
   return (
     <div className='container min-w-full h-screen'>
-      <img src={header_image} className='w-full h-screen object-cover absolute -z-50' alt='header'/>
+      <img src={header_image} className='parallax-image w-full h-screen object-cover absolute -z-50 will-change-transform translate-y-0' alt='header' />
       <div class="bg-gradient-to-r from-sky-950 w-full h-screen absolute -z-40"></div>
       <div className='container mx-auto py-2 px-10 text-white flex flex-col justify-center h-full'>
         <h1 className='text-5xl font-bold'>DORYLAB</h1>
