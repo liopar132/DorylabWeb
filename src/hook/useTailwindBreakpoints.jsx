@@ -22,10 +22,11 @@ export const useTailwindBreakpoints = () => {
   const [width] = useWindowSize();
 
   const breakpoints = {
-    sm: 640,
-    md: 768,
-    lg: 1024,
-    xl: 1280,
+    xs: 0,    // Optional: Tailwind does not have an xs by default
+    sm: 600,  // Matches MUI's sm breakpoint
+    md: 900,  // Matches MUI's md breakpoint
+    lg: 1200, // Matches MUI's lg breakpoint
+    xl: 1536, // Matches MUI's xl breakpoint
     '2xl': 1536,
   };
 

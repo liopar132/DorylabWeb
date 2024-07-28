@@ -2,14 +2,16 @@ import React from 'react';
 import header_image from './air-contionner.jpg'
 import { Grid } from '@mui/material';
 import ServiceCard from './ServiceCard';
+import { useTailwindBreakpoints } from '../../hook/useTailwindBreakpoints';
 
 function Servies2(props) {
+  const {isMedium} = useTailwindBreakpoints();
   return (
     <div id='services' ref={props.sectionRef} className="container min-w-full px-10  text-white">
       <div className="container mx-auto text-center flex flex-col items-center">
         {/* <h1 className="text-5xl font-bold pb-10 pt-5">Nos Services</h1> */}
         <div className='max-w-5xl'>
-          <Grid container  className=''>
+          <Grid container gap={isMedium? 4 : 0}>
             <Grid item md={12}>
               <ServiceCard title='DESIGN & INSTALLATION' imgSrc={header_image}>
                 We offer a full range of installation services, including 'design and build' for cooling, heating & ventilation, water services and plumbing requirements. From large commercial buildings, including Shell & Core or CAT-A/B fit outs through hospitals and universities, to small Data Rooms and high end residential premises.
